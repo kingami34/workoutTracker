@@ -22,7 +22,7 @@ router.post("/api/workouts/bulk", ({ body }, res) => {
 });
 
 router.get("/api/workouts", (req, res) => {
-  Workout.find({})
+  Workout.updateOne({})
     .sort({ date: -1 })
     .then(dbWorkout => {
       res.json(dbWorkout);
@@ -32,7 +32,7 @@ router.get("/api/workouts", (req, res) => {
     });
 });
 router.put("/api/workouts/:id", (req, res) => {
-  Workout.find({})
+  Workout.updateOne({})
   console.log(req.params.id)
 })
 
